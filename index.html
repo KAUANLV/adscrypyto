@@ -6,29 +6,15 @@
     <title>Símbolos de Criptomoedas</title>
     
     <style>
-        /* * Documentação do CSS:
-         * Todo o código dentro desta tag <style> é o nosso CSS.
-         * Ele é responsável pela aparência e design da página.
-         */
-
-        /* Estilos gerais */
         body {
             background-color: #12121f;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px; /* Adiciona um espaço nas bordas da página */
+            padding: 20px;
             text-align: center;
         }
 
-        /* * NOVO LAYOUT COM CSS GRID 
-         * Documentação:
-         * Este é o contêiner principal que organiza toda a nossa página.
-         * 'display: grid' ativa o layout de grade.
-         * 'grid-template-columns' define as 3 colunas: uma de 200px, uma flexível (1fr) e outra de 200px.
-         * 'grid-template-areas' desenha o mapa da nossa página de forma visual.
-         * 'gap' cria um espaçamento entre os elementos da grade.
-        */
         .page-container {
             display: grid;
             grid-template-columns: 200px 1fr 200px;
@@ -38,44 +24,36 @@
                 "ad-bottom ad-bottom ad-bottom"
                 "footer footer footer";
             gap: 20px;
-            max-width: 1400px; /* Largura máxima para a página não esticar demais em telas grandes */
-            margin: auto; /* Centraliza o contêiner na página */
+            max-width: 1400px;
+            margin: auto;
         }
 
-        /* --- ATRIBUIÇÃO DE ÁREAS DA GRADE --- */
-        /* Cada classe é associada a uma área que definimos no 'grid-template-areas' */
         header { grid-area: header; }
         .main-content { grid-area: main-content; }
         .ad-sidebar-left { grid-area: ad-left; }
         .ad-sidebar-right { grid-area: ad-right; }
         .ad-bottom-banner { grid-area: ad-bottom; }
         footer { grid-area: footer; }
-        
-        /* * NOVOS ESTILOS PARA OS ANÚNCIOS
-         * Documentação:
-         * Estes estilos criam as caixas cinzas para simular os anúncios,
-         * exatamente como na imagem que você enviou.
-        */
+
         .ad-placeholder {
-            background-color: #e0e0e0; /* Fundo cinza claro */
+            background-color: #e0e0e0;
             border: 1px solid #ccc;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 150px;
-            color: #333; /* Cor do texto do placeholder */
+            color: #333;
             font-size: 1.2em;
             border-radius: 8px;
             width: 100%;
             height: 100%;
         }
 
-        /* Estilização do cabeçalho */
         header {
             background-color: #1c1c2b;
             padding: 20px 0;
             border-bottom: 2px solid #f7931a;
-            border-radius: 8px; /* Adicionando bordas arredondadas */
+            border-radius: 8px;
         }
 
         header h1 {
@@ -83,7 +61,6 @@
             font-size: 2.5em;
         }
 
-        /* Estilização da seção principal e de simbolo */
         main, .simbolo-section {
             padding: 20px;
         }
@@ -93,7 +70,6 @@
             color: #f7931a;
         }
 
-        /* Contêiner dos símbolos de cripto */
         .crypto-container {
             display: flex;
             flex-wrap: wrap;
@@ -102,7 +78,6 @@
             margin-top: 20px;
         }
 
-        /* Estilização de cada "cartão" de cripto */
         .crypto-card {
             background-color: #1c1c2b;
             border: 1px solid #333;
@@ -124,7 +99,6 @@
             color: #f7931a;
         }
 
-        /* Contêiner do símbolo do Bitcoin */
         .simbolo-container {
             display: flex;
             justify-content: center;
@@ -133,7 +107,6 @@
             padding: 20px 0;
         }
 
-        /* Estilização de cada item do símbolo */
         .simbolo-item {
             background-color: #2a2a3a;
             border: 2px dashed #555;
@@ -147,14 +120,19 @@
             color: #f7931a;
         }
 
-        /* Estilização do rodapé */
         footer {
             background-color: #1c1c2b;
             padding: 15px 0;
-            margin-top: 20px; /* Margem superior para separar do anúncio */
+            margin-top: 20px;
             border-top: 1px solid #333;
-            border-radius: 8px; /* Adicionando bordas arredondadas */
+            border-radius: 8px;
             font-size: 0.9em;
+        }
+
+        /* botões de fechar banners laterais */
+        #aadsstickymgv9mgzc:checked + div,
+        #aadsstickymgv9qdlz:checked + div {
+            display: none;
         }
     </style>
 </head>
@@ -169,7 +147,7 @@
 
         <aside class="ad-sidebar-left">
             <div class="ad-placeholder">Advertise here</div>
-            </aside>
+        </aside>
 
         <div class="main-content">
             <main>
@@ -197,11 +175,11 @@
         </div>
 
         <aside class="ad-sidebar-right">
-             <div class="ad-placeholder">Advertise here</div>
-             </aside>
+            <div class="ad-placeholder">Advertise here</div>
+        </aside>
 
         <div class="ad-bottom-banner">
-             <div id="frame" style="width: 100%; position: relative; z-index: 1;">
+            <div id="frame" style="width: 100%; position: relative; z-index: 1;">
                 <iframe data-aa='2414026' src='//acceptable.a-ads.com/2414026/?size=Adaptive'
                         style='border:0; padding:0; width:100%; height:100%; min-height: 90px; overflow:hidden; display: block; margin: auto'></iframe>
             </div>
@@ -211,5 +189,42 @@
             <p>© 2025 Universo Cripto. Todos os direitos reservados.</p>
         </footer>
 
-    </div> </body>
+    </div>
+
+    <!-- Banner lateral esquerdo fixo -->
+    <div style="position: absolute; z-index: 99999">
+        <input autocomplete="off" type="checkbox" id="aadsstickymgv9mgzc" hidden />
+        <div style="padding-top: 0; padding-bottom: 0;">
+            <div style="width:15%;height:100%;position:fixed;text-align:center;font-size:0;top:50%;transform:translateY(-50%);left:0;min-width:100px">
+                <label for="aadsstickymgv9mgzc" style="bottom: 24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+                    <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+                        <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
+                    </svg>
+                </label>
+                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
+                    <iframe data-aa=2414026 src=//acceptable.a-ads.com/2414026/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner lateral direito fixo -->
+    <div style="position: absolute; z-index: 99999">
+        <input autocomplete="off" type="checkbox" id="aadsstickymgv9qdlz" hidden />
+        <div style="padding-top: 0; padding-bottom: 0;">
+            <div style="width:15%;height:100%;position:fixed;text-align:center;font-size:0;top:50%;transform:translateY(-50%);right:0;min-width:100px">
+                <label for="aadsstickymgv9qdlz" style="bottom: 24px;margin:0 auto;right:0;left:0;max-width:24px; position: absolute;border-radius: 4px; background: rgba(248, 248, 249, 0.70); padding: 4px;z-index: 99999;cursor:pointer">
+                    <svg fill="#000000" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
+                        <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 "/>
+                    </svg>
+                </label>
+                <div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;height:100%; display: flex;flex-direction: column; justify-content: center">
+                    <iframe data-aa=2414026 src=//acceptable.a-ads.com/2414026/?size=Adaptive style='border:0; padding:0; width:70%; height:70%; overflow:hidden; margin: 0 auto'></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
+
