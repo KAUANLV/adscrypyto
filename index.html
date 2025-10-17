@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Símbolos de Criptomoedas</title>
+    
+    <style>
+        /* * Documentação do CSS:
+         * Todo o código dentro desta tag <style> é o nosso CSS.
+         * Ele é responsável pela aparência e design da página.
+         */
+
+        /* Estilos gerais para todo o corpo da página */
+        body {
+            background-color: #12121f; /* Fundo escuro, típico de temas crypto */
+            color: #ffffff; /* Cor do texto principal (branco) */
+            font-family: Arial, sans-serif; /* Fonte padrão e limpa */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centraliza todo o texto por padrão */
+        }
+
+        /* Estilização do cabeçalho */
+        header {
+            background-color: #1c1c2b;
+            padding: 20px 0;
+            border-bottom: 2px solid #f7931a; /* Cor laranja, inspirada no Bitcoin */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em; /* Tamanho grande para o título principal */
+        }
+
+        /* Estilização da seção principal e de simbolo */
+        main, .simbolo-section {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #f7931a;
+        }
+
+        /* Contêiner dos símbolos de cripto */
+        .crypto-container {
+            display: flex; /* Usa Flexbox para alinhar os itens */
+            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+            justify-content: center; /* Centraliza os cartões na horizontal */
+            gap: 20px; /* Espaçamento entre os cartões */
+            margin-top: 20px;
+        }
+
+        /* Estilização de cada "cartão" de cripto */
+        .crypto-card {
+            background-color: #1c1c2b;
+            border: 1px solid #333;
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px;
+            width: 150px;
+            transition: transform 0.3s; /* Animação suave ao passar o mouse */
+        }
+
+        .crypto-card:hover {
+            transform: translateY(-10px); /* Eleva o cartão ao passar o mouse */
+            border-color: #f7931a;
+        }
+
+        .crypto-card h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .crypto-card span {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f7931a;
+        }
+
+        /* Contêiner do símbolo do Bitcoin */
+        .simbolo-container {
+            display: flex; /* Alinha os itens lado a lado */
+            justify-content: center; /* Centraliza o conjunto */
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+            gap: 15px; /* Espaço entre cada item */
+            padding: 20px 0;
+        }
+
+        /* Estilização de cada item do símbolo */
+        .simbolo-item {
+            background-color: #2a2a3a;
+            border: 2px dashed #555; /* Borda tracejada */
+            border-radius: 8px;
+            min-height: 120px; /* Altura mínima */
+            width: 18%; /* Largura */
+            min-width: 150px; /* Largura mínima para telas pequenas */
+            display: flex;
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            font-size: 4em; /* Tamanho grande para o símbolo ₿ */
+            color: #f7931a; /* Cor laranja do Bitcoin */
+        }
+
+        /* Estilização do rodapé */
+        footer {
+            background-color: #1c1c2b;
+            padding: 15px 0;
+            margin-top: 30px;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <h1>Universo das Criptomoedas</h1>
+        <p>Explore os símbolos mais conhecidos do mercado</p>
+    </header>
+
+    <main>
+        <h2>Símbolos Populares</h2>
+        <div class="crypto-container">
+            <div class="crypto-card"><h3>Bitcoin</h3><span>BTC</span></div>
+            <div class="crypto-card"><h3>Ethereum</h3><span>ETH</span></div>
+            <div class="crypto-card"><h3>Ripple</h3><span>XRP</span></div>
+            <div class="crypto-card"><h3>Litecoin</h3><span>LTC</span></div>
+            <div class="crypto-card"><h3>Cardano</h3><span>ADA</span></div>
+            <div class="crypto-card"><h3>Solana</h3><span>SOL</span></div>
+        </div>
+    </main>
+
+    <section class="simbolo-section">
+        <h2>Símbolo do Bitcoin</h2>
+        <div class="simbolo-container">
+            <div class="simbolo-item"><p>₿</p></div>
+            <div class="simbolo-item"><p>₿</p></div>
+            <div class="simbolo-item"><p>₿</p></div>
+            <div class="simbolo-item"><p>₿</p></div>
+            <div class="simbolo-item"><p>₿</p></div>
+        </div>
+    </section>
+
+    <div id
